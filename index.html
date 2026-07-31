@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CONOCE Agencia de Viajes | Paquetes a Turquía, Tailandia, Europa y México</title>
+  <meta name="description" content="CONOCE, agencia de viajes: paquetes y experiencias a la medida a Turquía, Tailandia, Europa y México. Asesoría personalizada, grupos reducidos y planes de pago flexibles. Cotiza por WhatsApp en minutos.">
+  <meta name="keywords" content="agencia de viajes, paquetes turísticos, viajes a Turquía, viajes a Tailandia, viajes a Europa, viajes a Puerto Vallarta, viajes en grupo, luna de miel, CONOCE agencia de viajes">
+  <meta property="og:title" content="CONOCE Agencia de Viajes | Tu próximo destino empieza aquí">
+  <meta property="og:description" content="Paquetes a la medida a Turquía, Tailandia, Europa y México. Asesoría personalizada de principio a fin.">
+  <meta property="og:image" content="imagenes/hero-fondo.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="imagenes/logo-crop.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       LOADER
+  ══════════════════════════════════════════════════════ -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-bulb">
+      <div class="loader-logo-badge">
+        <img class="loader-logo-img" src="imagenes/logo-crop.png" alt="">
+      </div>
+    </div>
+    <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    <span class="loader-text">Despegando...</span>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAVBAR
+  ══════════════════════════════════════════════════════ -->
+  <header id="navbar" role="banner">
+    <div class="container">
+      <div class="nav-inner">
+
+        <a href="#hero" class="nav-logo" aria-label="CONOCE Agencia de Viajes — inicio">
+          <div class="nav-logo-badge">
+            <img class="nav-logo-img" src="imagenes/logo-crop.png" alt="CONOCE, Agencia de Viajes — tu próximo destino">
+          </div>
+        </a>
+
+        <nav aria-label="Navegación principal">
+          <ul class="nav-links">
+            <li><a href="#why">Nosotros</a></li>
+            <li><a href="#ambientes">Destinos</a></li>
+            <li><a href="#proceso">Cómo Funciona</a></li>
+            <li><a href="#producto">Paquete Estrella</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+
+        <a href="#contacto" class="btn-gold nav-cta" style="font-size:13px; padding:12px 26px;">
+          Cotiza tu Viaje
+        </a>
+
+        <button class="hamburger" id="hamburger"
+                aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mob-menu" aria-label="Menú móvil">
+      <a href="#why">Nosotros</a>
+      <a href="#ambientes">Destinos</a>
+      <a href="#proceso">Cómo Funciona</a>
+      <a href="#producto">Paquete Estrella</a>
+      <a href="#contacto">Contacto</a>
+      <a href="#contacto">Cotiza tu Viaje →</a>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════ -->
+  <main>
+    <section id="hero" aria-labelledby="hero-heading">
+
+      <!-- Parallax background image (fixed) -->
+      <div class="hero-bg" aria-hidden="true"></div>
+      <!-- Dark overlays -->
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <!-- Grid texture -->
+      <div class="hero-grid" aria-hidden="true"></div>
+      <!-- Canvas particle orbs -->
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+      <!-- Light shafts -->
+      <div class="hero-rays" aria-hidden="true">
+        <div class="hero-ray r1"></div>
+        <div class="hero-ray r2"></div>
+        <div class="hero-ray r3"></div>
+        <div class="hero-ray r4"></div>
+        <div class="hero-ray r5"></div>
+      </div>
+      <!-- Film grain overlay -->
+      <div class="hero-grain" aria-hidden="true"></div>
+      <!-- One-shot scan reveal -->
+      <div class="hero-scanline" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-content">
+
+          <!-- Live badge -->
+          <div class="hero-badge" id="hero-badge" aria-hidden="true">
+            <div class="badge-dot"></div>
+            Turquía · Tailandia · Europa · México
+          </div>
+
+          <!-- Animated title -->
+          <h1 class="hero-title" id="hero-heading">
+            <span class="line"><span>Conoce</span></span>
+            <span class="line"><span>tu próximo</span></span>
+            <span class="line"><span class="accent">destino.</span></span>
+          </h1>
+
+          <!-- Subtitle -->
+          <p class="hero-sub" id="hero-sub">
+            Diseñamos itinerarios <strong>a tu medida</strong>, con grupos reducidos y acompañamiento antes, durante y después del viaje. De Estambul a Puerto Vallarta: tu próxima historia empieza con una cotización gratuita.
+          </p>
+
+          <!-- CTAs -->
+          <div class="hero-ctas" id="hero-ctas">
+            <a href="#contacto" class="btn-gold">
+              Solicitar Cotización
+              <i class="fa-solid fa-arrow-right" style="font-size:12px;"></i>
+            </a>
+            <a href="#ambientes" class="btn-outline">
+              <i class="fa-solid fa-compass" style="font-size:15px; color:var(--gray);"></i>
+              Ver Destinos
+            </a>
+          </div>
+
+          <!-- Trust bar -->
+          <div class="hero-trust" id="hero-trust" aria-label="Credenciales">
+            <div class="trust-item">
+              <i class="fa-solid fa-shield-halved"></i>
+              Asesoría 100% personalizada
+            </div>
+            <div class="trust-divider" aria-hidden="true"></div>
+            <div class="trust-item">
+              <i class="fa-solid fa-users"></i>
+              Grupos reducidos
+            </div>
+            <div class="trust-divider" aria-hidden="true"></div>
+            <div class="trust-item">
+              <i class="fa-solid fa-plane-departure"></i>
+              Salidas todo el año
+            </div>
+          </div>
+
+        </div><!-- /.hero-content -->
+      </div>
+
+      <!-- Scroll cue -->
+      <div class="scroll-cue" aria-hidden="true">
+        <div class="scroll-mouse">
+          <div class="scroll-mouse-dot"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         MARQUEE
+    ══════════════════════════════════════════════════ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-inner" id="marquee"></div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════
+         WHY — Features
+    ══════════════════════════════════════════════════ -->
+    <section id="why" aria-labelledby="why-heading">
+      <div class="container">
+
+        <div class="why-header">
+          <div class="reveal">
+            <div class="label">La diferencia CONOCE</div>
+            <h2 class="why-quote" id="why-heading">
+              Viajar no es solo llegar…
+              <em> es vivir cada momento del camino.</em>
+            </h2>
+          </div>
+          <p class="why-sub reveal d2">
+            Combinamos años de experiencia en turismo con atención cercana y honesta, para que tú solo te preocupes de disfrutar. Nosotros nos encargamos del resto.
+          </p>
+        </div>
+
+        <div class="features-grid">
+
+          <div class="f-card reveal">
+            <div class="f-num" aria-hidden="true">01</div>
+            <div class="f-icon" aria-hidden="true">
+              <i class="fa-solid fa-route"></i>
+            </div>
+            <h3>Itinerarios a tu Medida</h3>
+            <p>Diseñamos cada viaje según tus tiempos, presupuesto y estilo. Nada de paquetes genéricos armados en serie.</p>
+          </div>
+
+          <div class="f-card reveal d1">
+            <div class="f-num" aria-hidden="true">02</div>
+            <div class="f-icon" aria-hidden="true">
+              <i class="fa-solid fa-users"></i>
+            </div>
+            <h3>Grupos y Viajes en Pareja</h3>
+            <p>Desde escapadas románticas hasta viajes grupales con amigos o familia, cuidamos cada detalle del recorrido.</p>
+          </div>
+
+          <div class="f-card reveal d2">
+            <div class="f-num" aria-hidden="true">03</div>
+            <div class="f-icon" aria-hidden="true">
+              <i class="fa-solid fa-sliders"></i>
+            </div>
+            <h3>Planes de Pago Flexibles</h3>
+            <p>Aparta tu lugar y liquida a meses. Conocer el mundo también puede ser accesible para tu bolsillo.</p>
+          </div>
+
+          <div class="f-card reveal d3">
+            <div class="f-num" aria-hidden="true">04</div>
+            <div class="f-icon" aria-hidden="true">
+              <i class="fa-solid fa-headset"></i>
+            </div>
+            <h3>Acompañamiento Real</h3>
+            <p>Te asesoramos antes, durante y después del viaje. Siempre a un mensaje de distancia si algo se ofrece.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         AMBIENTES — Tipos de luz
+    ══════════════════════════════════════════════════ -->
+    <section id="ambientes" aria-labelledby="amb-heading">
+      <div class="container">
+
+        <div class="ambientes-top">
+          <div class="reveal">
+            <div class="label">Destinos Destacados</div>
+            <h2 class="section-title" id="amb-heading">
+              No todos los viajes<br>
+              <span class="gold">crean el mismo recuerdo</span>
+            </h2>
+            <p style="color:var(--gray); margin-top:16px; font-size:15.5px; max-width:440px; line-height:1.7;">
+              Estos son algunos de los destinos que ya vivieron nuestros viajeros. El tuyo puede ser el siguiente.
+            </p>
+          </div>
+          <div class="reveal d2">
+            <span class="ambiente-pill">¿A dónde te gustaría ir?</span>
+          </div>
+        </div>
+
+        <div class="ambientes-grid">
+
+          <!-- Turquía -->
+          <div class="amb-card reveal">
+            <img class="amb-img"
+              src="imagenes/destino-turquia.jpg"
+              alt="Mezquita de Ortaköy junto al Bósforo, Estambul, Turquía">
+            <div class="amb-overlay">
+              <div class="amb-icon-wrap"
+                   style="background:rgba(228,52,51,0.18); border-color:rgba(228,52,51,0.45);"
+                   aria-hidden="true">
+                <i class="fa-solid fa-landmark" style="color:#ff9f9e;"></i>
+              </div>
+              <h3>Turquía</h3>
+              <p>Estambul, Capadocia y el Bósforo: historia, bazares milenarios y paisajes de otro mundo.</p>
+              <div class="amb-temp">Paquetes desde 8 días</div>
+            </div>
+          </div>
+
+          <!-- Tailandia -->
+          <div class="amb-card reveal d1">
+            <img class="amb-img"
+              src="imagenes/destino-tailandia.jpg"
+              alt="Templo Azul (Wat Rong Suea Ten) en Chiang Rai, Tailandia">
+            <div class="amb-overlay">
+              <div class="amb-icon-wrap"
+                   style="background:rgba(234,155,0,0.18); border-color:rgba(255,194,77,0.45);"
+                   aria-hidden="true">
+                <i class="fa-solid fa-place-of-worship" style="color:#ffcf6b;"></i>
+              </div>
+              <h3>Tailandia</h3>
+              <p>Templos dorados, paseos en elefante y playas de aguas turquesa. Una aventura para los sentidos.</p>
+              <div class="amb-temp">Paquetes desde 10 días</div>
+            </div>
+          </div>
+
+          <!-- Europa / Londres -->
+          <div class="amb-card reveal d2">
+            <img class="amb-img"
+              src="imagenes/destino-londres.jpg"
+              alt="Big Ben y el Parlamento de Londres, Reino Unido">
+            <div class="amb-overlay">
+              <div class="amb-icon-wrap"
+                   style="background:rgba(255,255,255,0.1); border-color:rgba(255,255,255,0.3);"
+                   aria-hidden="true">
+                <i class="fa-solid fa-landmark-dome" style="color:white;"></i>
+              </div>
+              <h3>Europa</h3>
+              <p>Londres, Big Ben, Buckingham y Tower Bridge: la ruta clásica que todo viajero debe vivir una vez.</p>
+              <div class="amb-temp">Paquetes desde 9 días</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         PROCESO — How we work
+    ══════════════════════════════════════════════════ -->
+    <section id="proceso" class="section-photo-bg" aria-labelledby="proceso-heading">
+      <div class="container">
+
+        <div class="proceso-header reveal">
+          <div class="label">Cómo trabajamos</div>
+          <h2 class="section-title" id="proceso-heading">
+            Reservar tu viaje nunca fue <span class="gold">tan fácil</span>
+          </h2>
+          <p>De la idea al aeropuerto, te acompañamos en cada paso para que solo pienses en las maletas.</p>
+        </div>
+
+        <div class="proceso-grid">
+
+          <div class="proceso-step reveal">
+            <div class="step-number">Paso 01</div>
+            <h3>Cuéntanos tu Sueño</h3>
+            <p>Platicamos tu destino ideal, fechas y presupuesto. Asesoría inicial gratuita, sin compromiso.</p>
+          </div>
+
+          <div class="proceso-step reveal d1">
+            <div class="step-number">Paso 02</div>
+            <h3>Cotización a tu Medida</h3>
+            <p>Te armamos un itinerario claro: vuelos, hospedaje y actividades con precio transparente.</p>
+          </div>
+
+          <div class="proceso-step reveal d2">
+            <div class="step-number">Paso 03</div>
+            <h3>¡Empaca y Disfruta!</h3>
+            <p>Gestionamos reservas y documentos, y te acompañamos antes y durante todo tu viaje.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         PRODUCTO ESTRELLA
+    ══════════════════════════════════════════════════ -->
+    <section id="producto" aria-labelledby="prod-heading">
+      <div class="container">
+        <div class="producto-wrap">
+
+          <!-- Info -->
+          <div class="reveal">
+            <div class="label">Paquete Destacado</div>
+            <h2 class="section-title" id="prod-heading">
+              Estambul mágico<br>
+              <span class="gold">con todo incluido</span>
+            </h2>
+            <p class="producto-lead">
+              8 días recorriendo Estambul y Capadocia: mezquitas históricas, bazares milenarios, un paseo en globo y la hospitalidad turca que enamora a cada viajero.
+            </p>
+
+            <ul class="feature-rows" aria-label="Qué incluye el paquete a Estambul">
+              <li class="f-row">
+                <div class="f-row-icon" aria-hidden="true"><i class="fa-solid fa-plane"></i></div>
+                <div>
+                  <h4>Vuelos Redondos Incluidos</h4>
+                  <p>Boletos aéreos y traslados aeropuerto–hotel–aeropuerto sin complicaciones.</p>
+                </div>
+              </li>
+              <li class="f-row">
+                <div class="f-row-icon" aria-hidden="true"><i class="fa-solid fa-hotel"></i></div>
+                <div>
+                  <h4>Hospedaje Seleccionado</h4>
+                  <p>Hoteles 4-5 estrellas, ubicados en el corazón de cada ciudad.</p>
+                </div>
+              </li>
+              <li class="f-row">
+                <div class="f-row-icon" aria-hidden="true"><i class="fa-solid fa-eye"></i></div>
+                <div>
+                  <h4>Tours con Guía Certificado</h4>
+                  <p>Recorridos guiados por los sitios más icónicos, en español.</p>
+                </div>
+              </li>
+              <li class="f-row">
+                <div class="f-row-icon" aria-hidden="true"><i class="fa-solid fa-wallet"></i></div>
+                <div>
+                  <h4>Paga a Meses</h4>
+                  <p>Aparta tu lugar con un anticipo y liquida antes de viajar.</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="specs-bar" role="list" aria-label="Detalles del paquete a Estambul">
+              <div class="spec-cell" role="listitem">
+                <span class="spec-val">8</span>
+                <span class="spec-name">Días / 7 Noches</span>
+              </div>
+              <div class="spec-cell" role="listitem">
+                <span class="spec-val">&gt;12</span>
+                <span class="spec-name">Sitios Turísticos</span>
+              </div>
+              <div class="spec-cell" role="listitem">
+                <span class="spec-val">4-5★</span>
+                <span class="spec-name">Hospedaje</span>
+              </div>
+              <div class="spec-cell" role="listitem">
+                <span class="spec-val">Reducido</span>
+                <span class="spec-name">Tamaño de Grupo</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual -->
+          <div class="reveal d2">
+            <div class="panel-scene">
+              <div class="led-panel-body"
+                   role="img" aria-label="Viajera de CONOCE mostrando su boleto en el Caballo de Troya, Çanakkale, Turquía">
+              </div>
+              <div class="p-badge pb-tl" aria-hidden="true">
+                <div class="p-badge-dot"></div>
+                Grupo reducido — Salidas mensuales
+              </div>
+              <div class="p-badge pb-br" aria-hidden="true">
+                <i class="fa-solid fa-tag" style="color:var(--gold);"></i>
+                Cotización personalizada
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         STATS
+    ══════════════════════════════════════════════════ -->
+    <section id="stats" aria-label="Estadísticas clave">
+      <div class="container">
+        <div class="stats-grid reveal" role="list">
+
+          <div class="stat-cell" role="listitem">
+            <div class="stat-num"
+                 data-count="100" data-suffix="%"
+                 aria-label="100%">0</div>
+            <div class="stat-lbl">Asesoría<br>personalizada</div>
+          </div>
+
+          <div class="stat-cell" role="listitem">
+            <div class="stat-num"
+                 data-count="24" data-suffix="/7"
+                 aria-label="24/7">0</div>
+            <div class="stat-lbl">Acompañamiento<br>en tu viaje</div>
+          </div>
+
+          <div class="stat-cell" role="listitem">
+            <div class="stat-num"
+                 data-count="50" data-suffix="+"
+                 aria-label="Más de 50">0</div>
+            <div class="stat-lbl">Destinos<br>disponibles</div>
+          </div>
+
+          <div class="stat-cell" role="listitem">
+            <div class="stat-num"
+                 data-count="12" data-suffix=""
+                 aria-label="hasta 12 meses">0</div>
+            <div class="stat-lbl">Meses para<br>pagar tu viaje</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         SECTORES
+    ══════════════════════════════════════════════════ -->
+    <section id="sectores" class="section-photo-bg" aria-labelledby="sec-heading">
+      <div class="container">
+
+        <div class="sectores-hdr reveal">
+          <div class="label">Para cada viajero</div>
+          <h2 class="section-title" id="sec-heading">
+            Sin importar tu estilo, <span class="gold">tenemos tu viaje</span>
+          </h2>
+          <p>Diseñamos experiencias para cada tipo de viajero y ocasión.</p>
+        </div>
+
+        <div class="sectores-grid" role="list">
+          <div class="sector-card reveal" role="listitem">
+            <i class="fa-solid fa-heart sector-icon" aria-hidden="true"></i>
+            <h3>Parejas y Luna de Miel</h3>
+          </div>
+          <div class="sector-card reveal d1" role="listitem">
+            <i class="fa-solid fa-people-roof sector-icon" aria-hidden="true"></i>
+            <h3>Familias</h3>
+          </div>
+          <div class="sector-card reveal d2" role="listitem">
+            <i class="fa-solid fa-champagne-glasses sector-icon" aria-hidden="true"></i>
+            <h3>Grupos de Amigos</h3>
+          </div>
+          <div class="sector-card reveal d3" role="listitem">
+            <i class="fa-solid fa-briefcase sector-icon" aria-hidden="true"></i>
+            <h3>Viajes de Empresa</h3>
+          </div>
+          <div class="sector-card reveal d4" role="listitem">
+            <i class="fa-solid fa-person-hiking sector-icon" aria-hidden="true"></i>
+            <h3>Aventureros Solo</h3>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════
+         CONTACTO
+    ══════════════════════════════════════════════════ -->
+    <section id="contacto" class="section-photo-bg" aria-labelledby="contact-heading">
+      <div class="container">
+
+        <div class="contact-hdr reveal">
+          <div class="label">Contacto</div>
+          <h2 class="section-title" id="contact-heading">
+            Hablemos de <span class="gold">tu próximo viaje</span>
+          </h2>
+          <p>Cuéntanos a dónde quieres ir. Te respondemos por WhatsApp el mismo día.</p>
+        </div>
+
+        <div class="contact-box reveal">
+
+          <!-- Info panel -->
+          <div class="contact-info">
+            <h3>Planeamos Juntos tu Viaje</h3>
+            <p class="ci-sub">Asesoría personalizada, sin costo ni compromiso.</p>
+
+            <ul class="ci-list">
+              <li class="ci-item">
+                <div class="ci-icon" aria-hidden="true">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="ci-body">
+                  <h4>Cobertura</h4>
+                  <p>Coordinamos tu viaje estés donde estés, con atención en línea o presencial previa cita.</p>
+                </div>
+              </li>
+              <li class="ci-item">
+                <div class="ci-icon" aria-hidden="true">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div class="ci-body">
+                  <h4>Tiempo de Respuesta</h4>
+                  <p>Contestamos tu cotización el mismo día, directo por WhatsApp.</p>
+                </div>
+              </li>
+              <li class="ci-item">
+                <div class="ci-icon" aria-hidden="true">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="ci-body">
+                  <h4>WhatsApp</h4>
+                  <p>Escríbenos y cotizamos tu viaje en minutos.</p>
+                  <!-- TODO: reemplazar 521234567890 por el número real de WhatsApp de CONOCE -->
+                  <a href="https://wa.me/521234567890" target="_blank"
+                     rel="noopener noreferrer" class="ci-wa-link">
+                    Abrir chat →
+                  </a>
+                </div>
+              </li>
+            </ul>
+          </div><!-- /.contact-info -->
+
+          <!-- Form -->
+          <div class="contact-form-wrap">
+            <h3>Solicita tu Cotización</h3>
+            <form id="wa-form" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="f-name">Nombre completo</label>
+                  <input type="text" id="f-name" class="form-control"
+                         placeholder="Ej. Nombre Apellido" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="f-interest">¿A dónde quieres ir?</label>
+                  <select id="f-interest" class="form-control">
+                    <option>Cotización general</option>
+                    <option>Turquía</option>
+                    <option>Tailandia</option>
+                    <option>Europa (Londres)</option>
+                    <option>Puerto Vallarta / México</option>
+                    <option>Luna de miel</option>
+                    <option>Viaje en grupo</option>
+                  </select>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="f-msg">Cuéntanos tu viaje ideal</label>
+                <textarea id="f-msg" class="form-control" rows="4" required
+                          placeholder="Destino, fechas tentativas, número de personas y presupuesto aproximado…"></textarea>
+              </div>
+              <button type="submit" class="form-submit">
+                <i class="fa-brands fa-whatsapp"></i>
+                Solicitar Cotización
+              </button>
+              <p class="form-note">
+                Al enviar, se abrirá WhatsApp para continuar la conversación con nuestro equipo.
+              </p>
+            </form>
+          </div>
+
+        </div><!-- /.contact-box -->
+      </div>
+    </section>
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <div class="footer-logo-badge">
+            <img class="footer-logo-img" src="imagenes/logo-crop.png" alt="CONOCE Agencia de Viajes">
+          </div>
+        </div>
+        <p class="footer-copy">
+          &copy; <span id="year"></span> CONOCE Agencia de Viajes. Todos los derechos reservados.
+        </p>
+        <div class="footer-socials">
+          <!-- TODO: reemplazar por el usuario real de Instagram de CONOCE -->
+          <a href="https://www.instagram.com/conoce.viajes/"
+             target="_blank" rel="noopener noreferrer"
+             class="footer-soc" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="https://wa.me/521234567890" target="_blank"
+             rel="noopener noreferrer" class="footer-soc" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════════
+       FLOATING WHATSAPP
+  ══════════════════════════════════════════════════════ -->
+  <!-- TODO: reemplazar 521234567890 por el número real de WhatsApp de CONOCE -->
+  <a href="https://wa.me/521234567890?text=Hola%2C%20visit%C3%A9%20su%20sitio%20web%20y%20me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20paquetes%20de%20viaje."
+     target="_blank" rel="noopener noreferrer"
+     class="wa-btn" aria-label="Contactar por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
+</body>
+</html>
