@@ -102,6 +102,33 @@
     marqueeInner.innerHTML = full.map(t => `<span>${t}</span>`).join('');
   }
 
+  /* ── 6b. Carrusel de fotos ──────────────────────────────── */
+  const photoTrack = document.getElementById('photo-carousel-track');
+  if (photoTrack) {
+    const photos = [
+      { src: 'imagenes/destino-turquia.jpg',    alt: 'Mezquita de Ortaköy, Estambul, Turquía' },
+      { src: 'imagenes/galeria-pamukkale.jpg',  alt: 'Terrazas blancas de Pamukkale, Turquía' },
+      { src: 'imagenes/paquete-destacado.jpg',  alt: 'Ruinas de Hierápolis, Turquía' },
+      { src: 'imagenes/fondo-proceso.jpg',      alt: 'Atardecer en la costa de Turquía' },
+      { src: 'imagenes/destino-tailandia.jpg',  alt: 'Templo Azul de Chiang Rai, Tailandia' },
+      { src: 'imagenes/destino-mexico.jpg',     alt: 'Costa de Las Brisas, Acapulco, México' },
+      { src: 'imagenes/galeria-acapulco-1.jpg', alt: 'Vista aérea de Acapulco, México' },
+      { src: 'imagenes/galeria-acapulco-sign.jpg', alt: 'Letras monumentales de Acapulco, Guerrero' },
+      { src: 'imagenes/galeria-catemaco-1.jpg', alt: 'Catemaco junto al lago, Veracruz' },
+      { src: 'imagenes/galeria-catemaco-2.jpg', alt: 'Lago de Catemaco, Veracruz' },
+      { src: 'imagenes/galeria-cascada-1.jpg',  alt: 'Salto de Eyipantla, Veracruz' },
+      { src: 'imagenes/galeria-cascada-3.jpg',  alt: 'Cascada en la selva de Veracruz' },
+      { src: 'imagenes/fondo-sectores.jpg',     alt: 'Playa de Puerto Vallarta al atardecer' },
+      { src: 'imagenes/galeria-alberca.jpg',    alt: 'Alberca frente al mar en resort de playa' },
+      { src: 'imagenes/galeria-desayuno.jpg',   alt: 'Desayuno con vista al mar' },
+      { src: 'imagenes/fondo-contacto.jpg',     alt: 'Playa al atardecer con huellas en la arena' },
+    ];
+    const renderPhotos = (list) => list.map(p =>
+      `<img src="${p.src}" alt="${p.alt}" loading="lazy">`
+    ).join('');
+    photoTrack.innerHTML = renderPhotos(photos) + renderPhotos(photos);
+  }
+
   /* ── 7. WhatsApp form ──────────────────────────────────── */
   const form = document.getElementById('wa-form');
   if (form) {
@@ -116,8 +143,7 @@
         return;
       }
 
-      // TODO: reemplazar por el número real de WhatsApp de CONOCE
-      const phone = '521234567890';
+      const phone = '523348590100';
       const text  = encodeURIComponent(
         `Hola CONOCE ✈️\n\nSoy *${name}*.\nMe interesa: *${interest}*.\n\n${message}`
       );
