@@ -106,14 +106,22 @@
   const photoTrack = document.getElementById('photo-carousel-track');
   if (photoTrack) {
     const photos = [
+      { src: 'AC0B243190E85E7CD62B409021980E7B.jpeg', alt: 'Vista de Estambul junto al mar' },
+      { src: 'AC0E838570E800486D8E4D011C0310FE.jpeg', alt: 'Hotel Krystal Grand al atardecer' },
+      { src: 'AC28DEA6EFAC71B133EAD6C77F8211FC.jpeg', alt: 'Atardecer con bandera de Turquía' },
+      { src: 'AC30AF56150A79FE03451752FF572DF3.jpeg', alt: 'Mercado de especias y recuerdos' },
       { src: 'imagenes/destino-turquia.jpg',    alt: 'Mezquita de Ortaköy, Estambul, Turquía' },
       { src: 'imagenes/galeria-pamukkale.jpg',  alt: 'Terrazas blancas de Pamukkale, Turquía' },
       { src: 'imagenes/paquete-destacado.jpg',  alt: 'Ruinas de Hierápolis, Turquía' },
       { src: 'imagenes/fondo-proceso.jpg',      alt: 'Atardecer en la costa de Turquía' },
+      { src: 'AC31FE5B523F80DA76B5A705778E5903.jpeg', alt: 'Pan tradicional frente a una mezquita iluminada' },
+      { src: 'AC78BC3DD1E6890C60128D884E7C767D.jpeg', alt: 'Taj Mahal al atardecer' },
       { src: 'imagenes/destino-tailandia.jpg',  alt: 'Templo Azul de Chiang Rai, Tailandia' },
       { src: 'imagenes/destino-mexico.jpg',     alt: 'Costa de Las Brisas, Acapulco, México' },
       { src: 'imagenes/galeria-acapulco-1.jpg', alt: 'Vista aérea de Acapulco, México' },
       { src: 'imagenes/galeria-acapulco-sign.jpg', alt: 'Letras monumentales de Acapulco, Guerrero' },
+      { src: 'AC78B620DE4399376C30D1DABF850FA2.jpeg', alt: 'Playa tranquila al atardecer' },
+      { src: 'AC97E5320A6DFFBD90DD8A4624F46BFA.jpeg', alt: 'Costa de Acapulco al atardecer' },
       { src: 'imagenes/galeria-catemaco-1.jpg', alt: 'Catemaco junto al lago, Veracruz' },
       { src: 'imagenes/galeria-catemaco-2.jpg', alt: 'Lago de Catemaco, Veracruz' },
       { src: 'imagenes/galeria-cascada-1.jpg',  alt: 'Salto de Eyipantla, Veracruz' },
