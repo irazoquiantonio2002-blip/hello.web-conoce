@@ -58,6 +58,54 @@
   }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
   revealEls.forEach(el => revealObs.observe(el));
 
+  /* ── 4b. Panel Router (landing page: una sección a la vez) ─ */
+  const panels     = Array.from(document.querySelectorAll('.panel'));
+  const panelIds   = panels.map(p => p.id);
+  const navAnchors = document.querySelectorAll('.nav-links a, #mob-menu a');
+
+  function revealPanelContents(panel) {
+    panel.querySelectorAll('.reveal').forEach(el => {
+      el.classList.add('active');
+      revealObs.unobserve(el);
+    });
+  }
+
+  function setActiveNav(id) {
+    navAnchors.forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === `#${id}`);
+    });
+  }
+
+  function showPanel(id, opts) {
+    const scroll = !opts || opts.scroll !== false;
+    if (!panelIds.includes(id)) id = 'hero';
+
+    panels.forEach(p => { p.hidden = (p.id !== id); });
+    revealPanelContents(document.getElementById(id));
+    setActiveNav(id);
+    if (scroll) window.scrollTo(0, 0);
+
+    mobMenu.classList.remove('open');
+    burger.classList.remove('open');
+    burger.setAttribute('aria-expanded', 'false');
+  }
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    if (!panelIds.includes(id)) return;
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (`#${id}` !== location.hash) history.pushState(null, '', `#${id}`);
+      showPanel(id);
+    });
+  });
+
+  window.addEventListener('popstate', () => {
+    showPanel(location.hash.slice(1) || 'hero');
+  });
+
+  showPanel(location.hash.slice(1) || 'hero', { scroll: false });
+
   /* ── 5. Stat counter animation ─────────────────────────── */
   const statEls = document.querySelectorAll('[data-count]');
   const statObs = new IntersectionObserver((entries) => {

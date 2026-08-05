@@ -95,6 +95,37 @@ button { font-family: inherit; }
 .d3 { transition-delay: 240ms; }
 .d4 { transition-delay: 320ms; }
 
+/* ── Panels (landing page: una sección visible a la vez) ─────── */
+/* !important necesario: #hero fija su propio display:flex por ID
+   (mayor especificidad que un selector de clase+atributo), así que sin
+   esto #hero nunca llegaba a ocultarse de verdad al cambiar de panel. */
+.panel[hidden] { display: none !important; }
+.panel {
+  animation: panel-in 0.55s var(--ease);
+}
+@keyframes panel-in {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.panel-back {
+  display: inline-flex; align-items: center; gap: 9px;
+  font-size: 12.5px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--gray);
+  text-decoration: none; margin-bottom: 40px;
+  transition: color 0.2s ease, transform 0.3s var(--ease);
+}
+.panel-back i { font-size: 12px; transition: transform 0.3s var(--ease); }
+.panel-back:hover { color: var(--gold); }
+.panel-back:hover i { transform: translateX(-3px); }
+
+/* Active nav item (pestaña actual) */
+.nav-links a.active,
+#mob-menu a.active {
+  color: var(--gold);
+}
+.nav-links a.active::after { transform: scaleX(1) translateX(0); }
+
 /* ── Glass utility ──────────────────────────────────────────── */
 .glass {
   background: rgba(10,7,4,0.72);
@@ -293,7 +324,13 @@ button { font-family: inherit; }
 #hero {
   position: relative;
   min-height: 100vh;
-  display: flex; align-items: center; justify-content: center;
+  /* flex-direction:column (en vez de row + align-items:center) para que
+     .container se estire al 100% del ancho vía el eje cruzado. Con
+     row + align-items:center, .container se dimensionaba por contenido
+     (shrink-to-fit) y eso rompía el reparto de las columnas `fr` de
+     .hero-layout — Chrome resolvía minmax(0, 1.02fr) como 0px al no
+     tener un ancho definido de referencia. */
+  display: flex; flex-direction: column; justify-content: center;
   overflow: hidden;
 }
 
@@ -440,32 +477,6 @@ button { font-family: inherit; }
   font-size: 12.5px; font-weight: 600; color: rgba(255,255,255,0.45);
 }
 .trust-item i { color: var(--gold); font-size: 13px; }
-
-/* Scroll cue */
-.scroll-cue {
-  position: absolute; bottom: 36px; left: 50%;
-  transform: translateX(-50%);
-  z-index: 5; display: flex; flex-direction: column;
-  align-items: center; gap: 8px;
-  opacity: 0; animation: fade-in 1s ease 2s forwards;
-}
-@keyframes fade-in { to { opacity: 1; } }
-.scroll-mouse {
-  width: 24px; height: 38px; border-radius: 99px;
-  border: 1.5px solid rgba(255,255,255,0.2);
-  display: flex; justify-content: center; padding-top: 6px;
-}
-.scroll-mouse-dot {
-  width: 4px; height: 8px; border-radius: 99px;
-  background: var(--gold);
-  animation: scroll-dot 2.2s ease-in-out infinite;
-}
-@keyframes scroll-dot {
-  0%   { transform: translateY(0);  opacity: 1; }
-  75%  { transform: translateY(12px); opacity: 0; }
-  76%  { transform: translateY(0);    opacity: 0; }
-  100% { transform: translateY(0);    opacity: 1; }
-}
 
 /* ── Hero: Light Shafts ────────────────────────────────── */
 .hero-rays {
@@ -1380,8 +1391,7 @@ body {
 }
 .hero-rays,
 .hero-grain,
-.hero-scanline,
-.scroll-cue { display: none; }
+.hero-scanline { display: none; }
 .hero-scanline {
   background: linear-gradient(90deg, transparent, rgba(255, 77, 94, 0.75), rgba(14, 165, 233, 0.55), transparent);
   box-shadow: 0 0 26px rgba(255, 77, 94, 0.45);

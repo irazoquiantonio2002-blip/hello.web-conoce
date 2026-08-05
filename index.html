@@ -53,6 +53,8 @@
 
         <nav aria-label="Navegación principal">
           <ul class="nav-links">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#why">¿Por Qué Conoce?</a></li>
             <li><a href="#ambientes">Destinos</a></li>
             <li><a href="#proceso">Cómo Funciona</a></li>
             <li><a href="#producto">Paquete Estrella</a></li>
@@ -74,6 +76,8 @@
 
     <!-- Mobile menu -->
     <div id="mob-menu" aria-label="Menú móvil">
+      <a href="#hero">Inicio</a>
+      <a href="#why">¿Por Qué Conoce?</a>
       <a href="#ambientes">Destinos</a>
       <a href="#proceso">Cómo Funciona</a>
       <a href="#producto">Paquete Estrella</a>
@@ -87,7 +91,7 @@
        HERO
   ══════════════════════════════════════════════════════ -->
   <main>
-    <section id="hero" aria-labelledby="hero-heading">
+    <section id="hero" class="panel" aria-labelledby="hero-heading">
 
       <!-- Parallax background image (fixed) -->
       <div class="hero-bg" aria-hidden="true"></div>
@@ -178,26 +182,23 @@
         </div>
       </div>
 
-      <!-- Scroll cue -->
-      <div class="scroll-cue" aria-hidden="true">
-        <div class="scroll-mouse">
-          <div class="scroll-mouse-dot"></div>
-        </div>
+      <!-- ══════════════════════════════════════════════
+           MARQUEE
+      ══════════════════════════════════════════════ -->
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-inner" id="marquee"></div>
       </div>
     </section>
 
     <!-- ══════════════════════════════════════════════════
-         MARQUEE
-    ══════════════════════════════════════════════════ -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-inner" id="marquee"></div>
-    </div>
-
-    <!-- ══════════════════════════════════════════════════
          WHY — Features
     ══════════════════════════════════════════════════ -->
-    <section id="why" aria-labelledby="why-heading">
+    <section id="why" class="panel" hidden aria-labelledby="why-heading">
       <div class="container">
+
+        <a href="#hero" class="panel-back">
+          <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+        </a>
 
         <div class="why-header">
           <div class="reveal">
@@ -257,8 +258,12 @@
     <!-- ══════════════════════════════════════════════════
          AMBIENTES — Tipos de luz
     ══════════════════════════════════════════════════ -->
-    <section id="ambientes" aria-labelledby="amb-heading">
+    <section id="ambientes" class="panel" hidden aria-labelledby="amb-heading">
       <div class="container">
+
+        <a href="#hero" class="panel-back">
+          <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+        </a>
 
         <div class="ambientes-top">
           <div class="reveal">
@@ -353,8 +358,12 @@
     <!-- ══════════════════════════════════════════════════
          PROCESO — How we work
     ══════════════════════════════════════════════════ -->
-    <section id="proceso" class="section-photo-bg" aria-labelledby="proceso-heading">
+    <section id="proceso" class="panel section-photo-bg" hidden aria-labelledby="proceso-heading">
       <div class="container">
+
+        <a href="#hero" class="panel-back">
+          <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+        </a>
 
         <div class="proceso-header reveal">
           <div class="label">Cómo trabajamos</div>
@@ -391,8 +400,11 @@
     <!-- ══════════════════════════════════════════════════
          PRODUCTO ESTRELLA
     ══════════════════════════════════════════════════ -->
-    <section id="producto" aria-labelledby="prod-heading">
+    <section id="producto" class="panel" hidden aria-labelledby="prod-heading">
       <div class="container">
+        <a href="#hero" class="panel-back">
+          <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+        </a>
         <div class="producto-wrap">
 
           <!-- Info -->
@@ -481,8 +493,11 @@
     <!-- ══════════════════════════════════════════════════
          GALERÍA — Carrusel + mosaico de fotos reales
     ══════════════════════════════════════════════════ -->
-    <section id="galeria" aria-labelledby="galeria-heading">
+    <section id="galeria" class="panel" hidden aria-labelledby="galeria-heading">
       <div class="container">
+        <a href="#hero" class="panel-back">
+          <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+        </a>
         <div class="galeria-hdr reveal">
           <div class="label">Galería CONOCE</div>
           <h2 class="section-title" id="galeria-heading">
@@ -515,8 +530,12 @@
     <!-- ══════════════════════════════════════════════════
          CONTACTO
     ══════════════════════════════════════════════════ -->
-    <section id="contacto" class="section-photo-bg" aria-labelledby="contact-heading">
+    <section id="contacto" class="panel section-photo-bg" hidden aria-labelledby="contact-heading">
       <div class="container">
+
+        <a href="#hero" class="panel-back">
+          <i class="fa-solid fa-arrow-left"></i> Volver al inicio
+        </a>
 
         <div class="contact-hdr reveal">
           <div class="label">Contacto</div>
@@ -572,7 +591,7 @@
                 <div class="ci-body">
                   <h4>Facebook</h4>
                   <p>Síguenos para ver salidas, promos y fotos recientes.</p>
-                  <a href="https://www.facebook.com/conoceagyviajes/" target="_blank"
+                  <a href="https://www.facebook.com/share/1DYHJjBCDL/" target="_blank"
                      rel="noopener noreferrer" class="ci-wa-link">
                     Abrir Facebook →
                   </a>
@@ -644,7 +663,7 @@
              class="footer-soc" aria-label="Instagram">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <a href="https://www.facebook.com/conoceagyviajes/"
+          <a href="https://www.facebook.com/share/1DYHJjBCDL/"
              target="_blank" rel="noopener noreferrer"
              class="footer-soc" aria-label="Facebook">
             <i class="fa-brands fa-facebook-f"></i>
